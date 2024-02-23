@@ -5,7 +5,7 @@
 
 int sum_arr(int *arr, int start, int end) {
     // Base case
-    if (start == end - 1) {
+    if (start == end) {
         return arr[start];
     }
 
@@ -15,12 +15,13 @@ int sum_arr(int *arr, int start, int end) {
 
 int main(int argc, char *argv[]) {
     int arr[MAX_ARR];
-    for (int i = 1; i < argc; i++) {
+    int i;
+    for (i = 0; i < argc - 1; i++) {
         // atoi() converts a char* to an int, base 10
-        arr[i - 1] = atoi(argv[i]);
+        arr[i] = atoi(argv[i + 1]);
     }
 
-    int sum = sum_arr(arr, 0, argc - 1);
+    int sum = sum_arr(arr, 0, i - 1);
     printf("sum: %d\n", sum);
 
     return 0;
