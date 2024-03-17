@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 #include "rarray.h"
-#include "util.h"
 
 // TODO: add print_callback(), add qsort compare()
 
@@ -39,7 +38,7 @@ void test3(int len, char *arr[]) {
 
     int elem;
     rarray_get(ra, 0, &elem);
-
+    printf("%d\n", elem);
     rarray_free(ra);
 }
 
