@@ -30,4 +30,4 @@ size_t rarray_size(struct rarray *);
 void rarray_sort(struct rarray *, int (*)(const void *, const void *));
 
 // Iterate the array, calling the callback function for each element
-void rarray_iterate(struct rarray *, void (*)(void *));
+void rarray_iterate(struct rarray *, void (*)(void *), int limit);
