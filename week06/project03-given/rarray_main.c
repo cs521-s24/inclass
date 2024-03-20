@@ -22,7 +22,7 @@ void test2(int len, char *arr[]) {
         rarray_append(ra, &j);
     }
     rarray_size(ra);
-    rarray_iterate(ra, print_callback);
+    rarray_iterate(ra, print_callback, -1);
 
     rarray_free(ra);
 }
@@ -52,7 +52,7 @@ void test4(int len, char *arr[]) {
     }
 
     rarray_remove(ra, 0);
-    rarray_iterate(ra, print_callback);
+    rarray_iterate(ra, print_callback, -1);
     rarray_free(ra);
 }
 
@@ -65,7 +65,7 @@ void test5(int len, char *arr[]) {
     }
 
     rarray_sort(ra, compare);
-    rarray_iterate(ra, print_callback);
+    rarray_iterate(ra, print_callback, -1);
 }
 
 int main(int argc, char *argv[]) {
